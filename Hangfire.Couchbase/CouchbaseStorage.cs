@@ -104,7 +104,8 @@ namespace Hangfire.Couchbase
                 ($"{indexPrefix}_Type", false, new [] { "type" }),
                 ($"{indexPrefix}_Id", false, new[] { "id" }),
                 ($"{indexPrefix}_Expire", false, new[] { "expire_on" }),
-                ($"{indexPrefix}_Name", false, new[] { "name" })
+                ($"{indexPrefix}_Name", false, new[] { "name" }),
+                ($"{indexPrefix}_JobId", false, new[] { "job_id" })
             };
 
             IBucket bucket = Client.OpenBucket(Options.DefaultBucket);
